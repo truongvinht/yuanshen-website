@@ -1,4 +1,5 @@
 // import {useRouter} from 'next/router'
+import Head from 'next/head'
 import fetch from 'node-fetch';
 
 const character = (figure) => {
@@ -8,6 +9,10 @@ const character = (figure) => {
     const character = figure.figure;
     return (
         <div>
+
+            <Head>
+                <title>YS-Data - {character.name}</title>
+            </Head>
             <div>
             <h2>
                 {character.name} ({character.rarity}-Sterne) 
