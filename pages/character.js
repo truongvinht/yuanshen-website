@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const about = () => {
+const character = () => {
     return (
         <div>
             <Head>
@@ -11,4 +11,4 @@ const about = () => {
     );
 };
 
-export default about
+export default character
