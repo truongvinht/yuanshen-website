@@ -5,9 +5,45 @@ const character = (figure) => {
     // const router = useRouter();
     // const {id} = router.query;
     console.log(figure)
+    const character = figure.figure;
     return (
         <div>
-            This is new {figure.figure.name}
+            <div>
+            <h2>
+                {character.name} ({character.rarity}-Sterne) 
+            </h2>
+            <table>
+            <tbody>
+                <tr>
+                <th>Geburtstag</th>
+                <td>{character.birthday}</td>
+                </tr>
+                <tr>
+                <th>Region</th>
+                <td>{character.location}</td>
+                </tr>
+                <tr>
+                <th>Element</th>
+                <td>{character.element}</td>
+                </tr>
+                <tr>
+                <th>Waffentyp</th>
+                <td>{character.weapon}</td>
+                </tr>
+                <tr>
+                <th>Talentbücher</th>
+                <td>{character.talent}</td>
+                </tr>
+                <tr>
+                <th>Wochenboss / Drop</th>
+                <td>{character.boss} / {character.boss_drop}</td>
+                </tr>
+            </tbody>
+            </table>
+            </div>
+            <div>
+                <img src={character.imageurl} />
+            </div>
         </div>
     );
 };
@@ -36,7 +72,7 @@ export const getStaticProps = async (context) => {
     method: 'get', 
     headers: {
       'Content-Type': 'application/json',
-      'authorization': 'genshin',
+      'authorization': process.env.SERVICE_API_TOKEN,
       'name':context.params.id
     }
   });
@@ -54,11 +90,10 @@ export const getStaticPaths = async () => {
         method: 'get', 
         headers: {
           'Content-Type': 'application/json',
-          'authorization': 'genshin'
+          'authorization': process.env.SERVICE_API_TOKEN
         }
     });
     const resultMap = await res.json();
-    const figures = resultMap.figures;
      const names = resultMap.map(figure => figure.name);
      const paths = names.map(name => ({params: {id:name.toString()}}));
     return {
