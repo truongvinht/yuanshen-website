@@ -4,11 +4,11 @@ const about = () => {
     return (
         <div>
             <Head>
-                <title>YS-Data</title>
+                <title>GI-Daten</title>
             </Head>
-            <h2>About us</h2>
+            <h2>Über uns</h2>
             <p>
-              Content is provided by 'Die Lounge'. 
+              Inhalt wird bereitgestellt von 'Die Lounge'. 
             </p>
             <iframe src="https://discord.com/widget?id=574287632750608394&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>

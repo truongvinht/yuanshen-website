@@ -1,0 +1,8 @@
+.gridcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridcontainer > * {
+    flex: 1 1 33%;
+}

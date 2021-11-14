@@ -1,12 +1,17 @@
 import Head from 'next/head'
+import GridContainer from '../components/GridContainer';
 
 export default function Home() {
+
+  const list = ['hello','world'];
+
   return (
     <div>
       <Head>
-        <title>YS-Data</title>
+        <title>GI-Daten</title>
       </Head>
-      Welcome to YS-Data!
+      Willkommen bei GI Daten!!
+      <GridContainer items={list} />
     </div>
   )
 }

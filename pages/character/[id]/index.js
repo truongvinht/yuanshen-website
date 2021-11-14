@@ -11,7 +11,7 @@ const character = (figure) => {
         <div>
 
             <Head>
-                <title>YS-Data - {character.name}</title>
+                <title>GI-Daten - {character.name}</title>
             </Head>
             <div>
             <h2>

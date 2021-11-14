@@ -4,7 +4,7 @@ const banner = () => {
     return (
         <div>
             <Head>
-                <title>YS-Data</title>
+                <title>GI-Data</title>
             </Head>
             <h1>banner</h1>
         </div>

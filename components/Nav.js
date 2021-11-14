@@ -6,13 +6,13 @@ const Nav = () => {
         <nav className={navStyles.nav}>
             <ul>
                 <li>
-                    <Link href='/'><a>Home</a></Link>
+                    <Link href='/'><a>Aktuell</a></Link>
                 </li>
                 <li>
-                    <Link href='/character'><a>Character</a></Link>
+                    <Link href='/character'><a>Figuren</a></Link>
                 </li>
                 <li>
-                    <Link href='/about'><a>About</a></Link>
+                    <Link href='/about'><a>Über uns</a></Link>
                 </li>
             </ul>
         </nav>
